@@ -94,9 +94,9 @@ void rev(int arr[], int low, int high){
 }
 
 void leftRotateByD(int arr[], int n, int d){
-    rev(arr,0,d-1);
-    rev(arr,d,n-1);
-    rev(arr,0,n-1);
+    rev(arr,0,d-1);//1st reverse the d elements.
+    rev(arr,d,n-1);//reverse the remaining n-d elements.
+    rev(arr,0,n-1);//reverse the entire array to get the desired O/P.
             cout<<endl;
     cout<<"After rotation: "<<endl;
     for(int i=0; i<n; i++){
