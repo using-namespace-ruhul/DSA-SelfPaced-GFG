@@ -31,7 +31,7 @@ cout<<"Max difference is: "<<maxDiff(arr,n);
 return 0;
 }*/
 
-//efficient approach: 
+//efficient approach: TC = O(n)
 
 int maxDiff(int arr[], int n){
     int res = arr[1]-arr[0], min_Val=arr[0];//Initializing the diff of the 1st and the 2nd element as the maximum and the first element as the minimum value.  
