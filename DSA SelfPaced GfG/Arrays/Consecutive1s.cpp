@@ -2,6 +2,23 @@
  
 using namespace std;
 
+/*
+//Naive approach:
+int cons_1(bool arr[], int n){
+    int curr = 0, res = 0;
+    for(int i=0; i<n; i++){
+        curr =0;
+        for(int j=i; j<n; j++){
+            if(arr[j]==1)
+            curr++;
+            else
+            break;
+        }
+        res = max(res,curr);
+    }
+return res;
+}*/
+
 //Efficient approach: O(n):
 int cons_1(bool arr[], int n){
     int curr_max=0,res=0;//initializing res and current max as 0 as no 1 is there.
