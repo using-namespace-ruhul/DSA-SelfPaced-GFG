@@ -15,7 +15,7 @@ int max_Sub_Sum(int arr[], int n){
 return res;
 }*/
 
-//efficient solution: 
+//efficient solution: using the modified Kadane's algorithm.
 
 int max_Sub_Sum(int arr[], int n){
     int res = arr[0];//initializing res as the 1st element of the array assuming that is the only and largest sum subarray.
