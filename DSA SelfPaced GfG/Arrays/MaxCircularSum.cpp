@@ -30,6 +30,8 @@ return res;
 }//function for calculating the max sum of normal subarrays.
 
 int max_circular(int arr[], int n){
+ if(max_Normal_Sub(arr,n)<0)//if every element of the array is negative.
+    return max_Normal_Sub(arr,n);//then this will return the maximum of all the negative elements. Without this if condition we would have gotten the max overall sum as 0 for a negative array. 
      int res_min = arr[0];
      int minEnding = arr[0];
      for(int i=1; i<n; i++){
