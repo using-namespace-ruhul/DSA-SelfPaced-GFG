@@ -29,8 +29,11 @@ int max_Normal_Sub(int arr[], int n){
 return res;
 }//function for calculating the max sum of normal subarrays.
 
+/*
+//Efficient approach:TC = O(n)
+//with excess code!
 int max_circular(int arr[], int n){
- if(max_Normal_Sub(arr,n)<0)//if every element of the array is negative.
+    if(max_Normal_Sub(arr,n)<0)//if every element of the array is negative.
     return max_Normal_Sub(arr,n);//then this will return the maximum of all the negative elements. Without this if condition we would have gotten the max overall sum as 0 for a negative array. 
      int res_min = arr[0];
      int minEnding = arr[0];
@@ -46,6 +49,19 @@ int max_circular(int arr[], int n){
      int normal_sub_max = max_Normal_Sub(arr,n);//maximum sum of normal subarray
      int all_over_max = max(normal_sub_max,only_Circular);//taking the maximum of the normal subarray b/w the circular subarray.
 return all_over_max;
+}*/
+
+//with less code!
+int max_Overall(int arr[], int n){
+    int normal_Max = max_Normal_Sub(arr,n);
+    if(normal_Max<0) return normal_Max;
+    int arr_sum = 0;
+    for(int i=0; i<n; i++){
+        arr_sum+=arr[i];
+        arr[i] = -arr[i];
+    }
+    int circular_Max = arr_sum + max_Normal_Sub(arr,n);//adding the max subarray sum of the inverted to the entire array sum instead of substracting the min subarray sum from it.
+return max(normal_Max,circular_Max);
 }
 
 int main(){
@@ -60,7 +76,7 @@ int main(){
         cout<<arr[i]<<" ";
     }
     cout<<endl;
-    cout<<"The max circular subarray is: "<<max_circular(arr,n); 
+    cout<<"The max circular subarray is: "<<max_Overall(arr,n); 
  
 return 0;
 }
