@@ -1,4 +1,5 @@
-- DSA Self Paced from GfG
+- <h2>DSA Self Paced from GfG</h2>
+<hr>
 
 These are the problems discussed in the DSA self paced course from GeeksforGeeks.
 
