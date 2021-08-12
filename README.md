@@ -1,8 +1,4 @@
-- 👋 Hi, I’m @using-namespace-ruhul
-- 👀 I’m interested in ...Competetive coding... Web Development...DSA.
-- 🌱 I’m currently learning ...Data Structures and Algorithms. 
-- 💞️ I’m looking to collaborate on ...
-- 📫 How to reach me ... ruhul.sardar143@gmail.com
+These are the problems discussed in the DSA self paced course from GeeksforGeeks.
 
 <!---
 using-namespace-ruhul/using-namespace-ruhul is a ✨ special ✨ repository because its `README.md` (this file) appears on your GitHub profile.
